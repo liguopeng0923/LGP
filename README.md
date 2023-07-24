@@ -4,7 +4,12 @@
 ### Towards Generic and Controllable Attacks Against Object Detection.
 Existing adversarial attacks against Object Detectors (ODs) suffer from two inherent limitations. Firstly, ODs have complicated meta-structure designs, hence most advanced attacks for ODs concentrate on attacking specific detector-intrinsic structures, which makes it hard for them to work on other detectors and motivates us to design a generic attack against ODs. Secondly, most works against ODs make Adversarial Examples (AEs) by generalizing image-level attacks from classification to detection, which brings redundant computations and perturbations in semantically meaningless areas (\eg, backgrounds) and leads to an emergency for seeking controllable attacks for ODs. To this end, we propose a generic white-box attack, LGP (local perturbations with adaptively global attacks), to blind mainstream object detectors with controllable perturbations. For a detector-agnostic attack, LGP tracks high-quality proposals and optimizes three heterogeneous losses simultaneously. In this way, we can fool the crucial components of ODs with a part of their outputs without the limitations of specific structures. Regarding controllability, we establish an object-wise constraint that exploits  foreground-background separation adaptively to induce the attachment of perturbations to foregrounds. Experimentally, the proposed LGP successfully attacked sixteen state-of-the-art object detectors on MS-COCO and DOTA datasets, with promising imperceptibility and transferability obtained.
 
-![Snipaste_2022-06-17_11-58-45](docs/overall_frame.pdf)
+
+
+![overall framework](./docs/overall_frame.png)
+
+![overall framework](./docs/More_results.png)
+
 
 
 ## Installation
@@ -36,8 +41,6 @@ CUDA_VISIBLE_DEVICES=2 python mmdet/tools/tes.py mmdet/configs/faster_rcnn_adv/f
 ## Acknowledgement
 
 MMdetection, and MMRotate are open source projects that are contributed by researchers and engineers from various colleges and companies. We appreciate all the contributors who implement their methods or add new features, as well as users who give valuable feedbacks.
-
-## Citation
 
 ```
 @article{mmdetection,
@@ -74,6 +77,7 @@ MMdetection, and MMRotate are open source projects that are contributed by resea
 
 ```
 
+## Citation
 
 If you use LGP in your projects or papers, please, cite it as follows.
 ```
