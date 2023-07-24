@@ -1,8 +1,4 @@
 # Copyright (c) OpenMMLab. All rights reserved.
-import sys
-# 添加项目根目录到运行环境, 非常重要。
-sys.path.insert(0, '/remote-home/liguopeng/object_detection/object_detection/mmdetection')
-# Copyright (c) OpenMMLab. All rights reserved.
 import argparse
 import os
 import os.path as osp
@@ -23,22 +19,6 @@ from mmdet.models import build_detector
 from mmdet.utils import (build_ddp, build_dp, compat_cfg, get_device,
                          replace_cfg_vals, setup_multi_processes,
                          update_data_root)
-# CUDA_VISIBLE_DEVICES=1 python3 /remote-home/liguopeng/paper/CVPR2023/mmdetection/tools/test.py \
-#  /remote-home/liguopeng/paper/CVPR2023/mmdetection/configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py \
-# /remote-home/liguopeng/paper/CVPR2023/mmdetection/checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --eval bbox\
-#  --work-dir /remote-home/liguopeng/paper/CVPR2023/cvpr2023/TIP/FR/CWA/defensemap
-
-# CUDA_VISIBLE_DEVICES=3 python3 /remote-home/liguopeng/paper/CVPR2023/mmdetection/tools/test.py \
-#  /remote-home/liguopeng/paper/CVPR2023/mmdetection/configs/fcos/fcos_x101_64x4d_fpn_gn-head_mstrain_640-800_2x_coco.py \
-# /remote-home/liguopeng/paper/CVPR2023/mmdetection/checkpoints/fcos_x101_64x4d_fpn_gn-head_mstrain_640-800_2x_coco-ede514a8.pth --eval bbox\
-#  --work-dir /remote-home/liguopeng/paper/CVPR2023/cvpr2023/TIP/trans_same/DLGPall150/x101/
-
-"""
-    "/remote-home/liguopeng/paper/CVPR2023/mmdetection/configs/faster_rcnn/faster_rcnn_r101_fpn_1x_coco.py",
-            "/remote-home/liguopeng/paper/CVPR2023/mmdetection/checkpoints/faster_rcnn_r101_fpn_1x_coco_20200130-f513f705.pth",
-            "--eval","bbox",
-        "--show-dir","/remote-home/liguopeng/object_detection/object_detection/mmdetection/test/results_with_bbox"
-"""
 def parse_args():
     parser = argparse.ArgumentParser(
         description='MMDet test (and eval) a model')

@@ -1,4 +1,4 @@
-_base_ = '/remote-home/liguopeng/paper/CVPR2023/mmdetection/configs/ssd/ssd300_coco.py'
+_base_ = 'mmdet/configs/ssd/ssd300_coco.py'
 
 attack = dict(
             method = dict(

@@ -1,4 +1,4 @@
-_base_ = "/remote-home/liguopeng/paper/CVPR2023/mmrotate/configs/gliding_vertex/gliding_vertex_r50_fpn_1x_dota_le90.py"
+_base_ = "mmrotate/configs/gliding_vertex/gliding_vertex_r50_fpn_1x_dota_le90.py"
 dataset_type = 'DOTADatasetAdv'
 
 angle_version = {{_base_.angle_version}}

@@ -1,7 +1,6 @@
 # dataset settings
 dataset_type = 'CocoDataset'
-data_root = '/remote-home/liguopeng/paper/CVPR2023/mmdetection/datasets/coco/'
-# data_root = '/remote-home/liguopeng/paper/CVPR2023/mmdetection/test/'
+data_root = 'mmdet/datasets/coco/'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 train_pipeline = [
@@ -37,8 +36,6 @@ data = dict(
         type=dataset_type,
         ann_file=data_root + 'annotations/instances_val2017.json',
         img_prefix=data_root + 'val2017/',
-        # ann_file='/remote-home/liguopeng/paper/CVPR2023/mmdetection/test/annotations/instances_val2017.json',
-        # img_prefix = '/remote-home/liguopeng/paper/CVPR2023/mmdetection/test/val2017/',
         pipeline=train_pipeline),
     val=dict(
         type=dataset_type,
@@ -47,9 +44,8 @@ data = dict(
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
-        # ann_file=data_root + 'annotations/instances_val2017.json',
-        ann_file = "/remote-home/liguopeng/paper/CVPR2023/mmdetection/test/instances_val2017.json",
-        # img_prefix=data_root + 'val2017/',
-        img_prefix = '/remote-home/liguopeng/paper/CVPR2023/cvpr2023/TIP/FR/CWA/defenseNRP',
-        pipeline=test_pipeline))
+        ann_file=data_root + 'annotations/instances_val2017.json',
+       
+        img_prefix=data_root + 'val2017/',
+        ))
 evaluation = dict(interval=1, metric='bbox')

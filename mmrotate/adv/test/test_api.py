@@ -1,8 +1,5 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 import sys
-# 添加项目根目录到运行环境, 非常重要。
-sys.path.insert(0, '/remote-home/liguopeng/paper/CVPR2023/mmrotate/')
-
 import os.path as osp
 import pickle
 import shutil

@@ -1,9 +1,7 @@
 # dataset settings
 dataset_type = 'CocoDataset'
-# data_root = '/remote-home/liguopeng/paper/CVPR2023/mmdetection/datasets/coco/'
-data_root = '/remote-home/liguopeng/paper/CVPR2023/mmdetection/test/'
 
-# data_root = "/remote-home/liguopeng/object_detection/object_detection/mmdetection/test/"
+data_root = "/mmdet/coco/"
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 train_pipeline = [
@@ -47,8 +45,6 @@ data = dict(
     test=dict(
         type=dataset_type,
         ann_file=data_root + 'annotations/instances_val2017.json',
-        # ann_file='/remote-home/liguopeng/paper/CVPR2023/mmdetection/test/annotations/instances_val2017.json',
-        # img_prefix = '/remote-home/liguopeng/paper/CVPR2023/cvpr2023/TIP/trans_same/CLS/x101/images',
-        img_prefix = '/remote-home/liguopeng/paper/CVPR2023/cvpr2023/TIP/trans_same/DLGPall150/r101/images',
+        img_prefix = data_root + 'val2017/',
         pipeline=test_pipeline))
 evaluation = dict(metric=['bbox', 'segm'])

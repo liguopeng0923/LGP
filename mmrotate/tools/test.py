@@ -1,7 +1,5 @@
 # Copyright (c) OpenMMLab. All rights reserved.
-import sys
-# 添加项目根目录到运行环境, 非常重要。
-sys.path.insert(0, '/remote-home/liguopeng/paper/CVPR2023/mmrotate/')
+
 import argparse
 import os
 import os.path as osp
@@ -21,8 +19,6 @@ from mmdet.datasets import build_dataloader, replace_ImageToTensor
 from mmrotate.datasets import build_dataset
 from mmrotate.models import build_detector
 from mmrotate.utils import compat_cfg, setup_multi_processes
-
-# CUDA_VISIBLE_DEVICES=0 python3 /remote-home/liguopeng/paper/CVPR2023/mmrotate/tools/test.py /remote-home/liguopeng/paper/CVPR2023/mmrotate/configs/oriented_rcnn/oriented_rcnn_r50_fpn_1x_dota_le90.py /remote-home/liguopeng/paper/CVPR2023/mmrotate/checkpoints/oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth --eval mAP --work-dir /remote-home/liguopeng/paper/CVPR2023/cvpr2023/oriented_rcnn/CWA/defensemap
 def parse_args():
     """Parse parameters."""
     parser = argparse.ArgumentParser(

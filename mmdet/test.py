@@ -1,3 +1,0 @@
-import torch
-print(torch.tensor([torch.tensor(2.0),2.0]))
-python demo/vis_cam.py /remote-home/liguopeng/object_detection/remote_sensing/cvpr2023/faster_rcnn/DLGP_roi/images/000000001000.png  /remote-home/liguopeng/object_detection/object_detection/mmdetection/configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py /remote-home/liguopeng/object_detection/object_detection/mmdetection/checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth  --method featmapam --out-dir save_dir

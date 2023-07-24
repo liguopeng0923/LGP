@@ -84,9 +84,3 @@ class COCO:
             load_json['categories'].append(self.cats[i])
         with open(tarFile, 'w+') as f:
             json.dump(load_json, f, indent=4)
-
-coco = COCO('/remote-home/liguopeng/object_detection/object_detection/mmdetection/datasets/coco/annotations/instances_val2017.json',
-            origin_img_dir='/remote-home/liguopeng/object_detection/object_detection/mmdetection/datasets/coco/val2017')               
-# 完整的coco数据集的图片和标注的路径
-coco.build('/remote-home/liguopeng/paper/CVPR2023/mmdetection/test/val2017', '/remote-home/liguopeng/paper/CVPR2023/mmdetection/test/annotations/instances_val2017.json', 100)  
-# 保存图片路径

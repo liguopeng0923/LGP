@@ -1,6 +1,6 @@
 # dataset settings
 dataset_type = 'DOTADataset'
-data_root = '/remote-home/liguopeng/paper/CVPR2023/mmrotate/data/split_ss_dota/'
+data_root = 'mmrotate/data/split_ss_dota/'
 
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
@@ -36,17 +36,17 @@ data = dict(
         type=dataset_type,
         ann_file=data_root + 'val/annfiles/',
         img_prefix=data_root + 'val/images/',
-        # img_prefix = "/remote-home/liguopeng/paper/CVPR2023/cvpr2023/TIP/OR/REG/images",
+
         pipeline=train_pipeline),
     val=dict(
         type=dataset_type,
         ann_file=data_root + 'val/annfiles/',
         img_prefix=data_root + 'val/images/',
-        # img_prefix = "/remote-home/liguopeng/object_detection/remote_sensing/cvpr2023/oriented_rcnn/DAG/images",
+
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
         ann_file=data_root + 'val/annfiles/',
-        img_prefix = "/remote-home/liguopeng/paper/CVPR2023/cvpr2023/oriented_rcnn/CWA/defenseNRP",
-        # img_prefix=data_root + 'val/images/',
+
+        img_prefix=data_root + 'val/images/',
         pipeline=test_pipeline))

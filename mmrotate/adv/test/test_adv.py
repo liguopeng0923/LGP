@@ -1,9 +1,6 @@
 import sys
 import os
 # os.environ['CUDA_VISIBLE_DEVICES'] = '2'
-
-# 添加项目根目录到运行环境, 非常重要。
-sys.path.insert(0, '/remote-home/liguopeng/paper/CVPR2023/mmrotate/')
 import torch
 import argparse
 import os.path as osp
@@ -23,7 +20,6 @@ from mmrotate.models import build_detector
 from shutil import copy
 from test_api import single_gpu_test_adv,multi_gpu_test_adv
 
-"CUDA_VISIBLE_DEVICES=0 python /remote-home/liguopeng/paper/CVPR2023/mmrotate/adv/test/test_adv.py /remote-home/liguopeng/paper/CVPR2023/mmrotate/adv/configs/oriented_rcnn/oriented_rcnn_r50_fpn_1x_dota_le90_adv.py /remote-home/liguopeng/paper/CVPR2023/mmrotate/checkpoints/oriented_rcnn_r50_fpn_1x_dota_le90-6d2b2ce0.pth --eval mAP  --show-dir /remote-home/liguopeng/paper/CVPR2023/cvpr2023/TIP/OR/DAG8/images/ --work-dir /remote-home/liguopeng/paper/CVPR2023/cvpr2023/TIP/OR/DAG8/work_dir/"
 def parse_args():
     """Parse parameters."""
     parser = argparse.ArgumentParser(

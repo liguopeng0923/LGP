@@ -105,6 +105,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
     print(f"FID score is {fid(args.org_path,args.adv_path)}")
     
-    # CUDA_VISIBLE_DEVICES=0 python /remote-home/liguopeng/paper/CVPR2023/mmrotate/adv_perceptible_metric.py /remote-home/liguopeng/paper/CVPR2023/mmrotate/data/split_ss_dota/val/images /remote-home/liguopeng/paper/CVPR2023/cvpr2023/TIP/FR/DAG_0.2/images tmp
     
     

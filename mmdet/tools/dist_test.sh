@@ -1,8 +1,4 @@
-#!/usr/bin/env bash
-# CUDA_VISIBLE_DEVICES=0 PORT=29503 bash /remote-home/liguopeng/object_detection/object_detection/mmdetection/tools/dist_test.sh \
-#  /remote-home/liguopeng/object_detection/object_detection/mmdetection/configs/detectors/detectors_cascade_rcnn_r50_1x_coco.py\
-#     /remote-home/liguopeng/object_detection/object_detection/mmdetection/checkpoints/detectors_cascade_rcnn_r50_1x_coco-32a10ba0.pth\
-#     1   --eval bbox --work-dir /remote-home/liguopeng/object_detection/remote_sensing/cvpr2023/mmdetection/sabl_r50/workdir
+
 
 CONFIG=$1
 CHECKPOINT=$2

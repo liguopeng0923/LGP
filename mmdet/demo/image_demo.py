@@ -4,11 +4,6 @@ from argparse import ArgumentParser
 
 from mmdet.apis import (async_inference_detector, inference_detector,
                         init_detector, show_result_pyplot)
-import sys
-# 添加项目根目录到运行环境, 非常重要。
-sys.path.insert(0, '/remote-home/liguopeng/object_detection/object_detection/mmdetection')
-# "/remote-home/liguopeng/adversarial_attack/detection/DAG/output/images/0_adv.jpg","/remote-home/liguopeng/object_detection/object_detection/mmdetection/configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py", "/remote-home/liguopeng/object_detection/object_detection/mmdetection/checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth", "--out-file", "/remote-home/liguopeng/object_detection/object_detection/mmdetection/demo/res.png"
-# python /remote-home/liguopeng/object_detection/object_detection/mmdetection/demo/image_demo.py /remote-home/liguopeng/object_detection/remote_sensing/cvpr2023/faster_rcnn/DLGP_roi/1.5/images/000000006818.png /remote-home/liguopeng/object_detection/object_detection/mmdetection/configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py /remote-home/liguopeng/object_detection/object_detection/mmdetection/checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --out-file /remote-home/liguopeng/object_detection/object_detection/mmdetection/demo/res.png
 def parse_args():
     parser = ArgumentParser()
     parser.add_argument('img', help='Image file')

@@ -1,7 +1,5 @@
 # encoding: utf-8
 import sys
-# 添加项目根目录到运行环境, 非常重要。
-sys.path.insert(0, '/remote-home/liguopeng/paper/CVPR2023/LGP_mmdet')
 import os
 import torch
 import argparse
@@ -26,7 +24,7 @@ from mmdet.utils import (build_ddp, build_dp, compat_cfg, get_device,
 from mmdet.apis import init_random_seed, set_random_seed
 from mmdet.utils import compat_cfg, setup_multi_processes,get_root_logger,collect_env
 from shutil import copy
-"CUDA_VISIBLE_DEVICES=2 python /remote-home/liguopeng/paper/CVPR2023/LGP_mmdet/adv/test/test_adv.py /remote-home/liguopeng/paper/CVPR2023/LGP_mmdet/adv/configs/faster_rcnn_adv/faster_rcnn_r50_fpn_1x_coco_adv.py /remote-home/liguopeng/paper/CVPR2023/mmdetection/checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --eval bbox --work-dir /remote-home/liguopeng/paper/CVPR2023/cvpr2023/TIP/FR/DLGPDAG/work-dir --show-dir /remote-home/liguopeng/paper/CVPR2023/cvpr2023/TIP/FR/DLGPDAG/images"
+
 def parse_args(): 
     parser = argparse.ArgumentParser(
         description='MMDet test (and eval) a model')

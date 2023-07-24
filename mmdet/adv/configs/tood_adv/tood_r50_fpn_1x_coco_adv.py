@@ -1,5 +1,5 @@
 _base_ = [
-    '/remote-home/liguopeng/paper/CVPR2023/mmdetection/configs/tood/tood_r50_fpn_1x_coco.py'
+    'mmdet/configs/tood/tood_r50_fpn_1x_coco.py'
 ]
 
 img_norm_cfg = dict(

@@ -1,5 +1,5 @@
 _base_ = [
-    '/remote-home/liguopeng/paper/CVPR2023/mmdetection/configs/cascade_rcnn/cascade_rcnn_r50_fpn_1x_coco.py'
+    'mmdet/configs/cascade_rcnn/cascade_rcnn_r50_fpn_1x_coco.py'
 ]
 
 img_norm_cfg = dict(

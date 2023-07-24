@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-_base_ = '/remote-home/liguopeng/paper/CVPR2023/mmrotate/configs/deformable_detr/deformable_detr_twostage_refine_r50_16x2_50e_dota.py'
+_base_ = 'mmrotate/configs/deformable_detr/deformable_detr_twostage_refine_r50_16x2_50e_dota.py'
 dataset_type = 'DOTADatasetAdv'
 
 angle_version = {{_base_.angle_version}}

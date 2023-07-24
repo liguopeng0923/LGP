@@ -1,5 +1,5 @@
 _base_ = [
-    '/remote-home/liguopeng/paper/CVPR2023/mmrotate/configs/redet/redet_re50_refpn_1x_dota_le90.py',
+    '/mmrotate/configs/redet/redet_re50_refpn_1x_dota_le90.py',
 ]
 # model = dict(
 #     test_cfg=dict(

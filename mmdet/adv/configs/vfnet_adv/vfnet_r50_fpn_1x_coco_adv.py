@@ -1,5 +1,5 @@
 _base_ = [
-    '/remote-home/liguopeng/paper/CVPR2023/mmdetection/configs/vfnet/vfnet_r50_fpn_1x_coco.py'
+    'mmdet/configs/vfnet/vfnet_r50_fpn_1x_coco.py'
 ]
 
 img_norm_cfg = dict(
