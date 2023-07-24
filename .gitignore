@@ -123,6 +123,8 @@ work_dirs/
 *.py~
 *.sh~
 *.svg
-*.png
+
 *.jpg
 *.pth
+
+
