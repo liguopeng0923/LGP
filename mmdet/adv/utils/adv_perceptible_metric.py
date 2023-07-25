@@ -4,7 +4,7 @@ from mmcv.image import tensor2imgs
 from sewar.full_ref import psnrb
 from piq import LPIPS,TVLoss,InformationWeightedSSIMLoss,BRISQUELoss
 from .transforms import imdenormalize
-import pyiqa
+# import pyiqa
 from mmdet.utils import get_root_logger
 
 class PerceptualDistance(object):
@@ -92,10 +92,10 @@ class PerceptualDistance(object):
     def metrics_float(self):
         return torch.tensor([self.l_inf_avg,self.iwssim_avg,self.brisque_avg,torch.tensor(self.psnrb_avg),self.tv_avg,self.lpips_avg])
     
-def fid(org_path,adv_path):
-    fid_metric = pyiqa.create_metric('fid')
-    score = fid_metric(org_path, adv_path)
-    return score
+# def fid(org_path,adv_path):
+#     fid_metric = pyiqa.create_metric('fid')
+#     score = fid_metric(org_path, adv_path)
+#     return score
 
 if __name__ == '__main__':
     """Parse parameters."""

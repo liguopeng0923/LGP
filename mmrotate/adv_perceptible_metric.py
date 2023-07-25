@@ -4,7 +4,7 @@ from mmcv.image import tensor2imgs
 from sewar.full_ref import psnrb
 from piq import LPIPS,TVLoss,InformationWeightedSSIMLoss,BRISQUELoss
 from adv.utils.transforms import imdenormalize
-import pyiqa
+# import pyiqa
 import mmcv
 import os
 class PerceptualDistance(object):
@@ -77,11 +77,11 @@ class PerceptualDistance(object):
     def images_metric(self, references, perturbed, img_metas):
         return self.cal_perceptual_distances(references, perturbed, img_metas)
     
-def fid(org_path,adv_path):
-    fid_metric = pyiqa.create_metric('fid')
-    score = fid_metric(org_path, adv_path)
-    print(score)
-    return score
+# def fid(org_path,adv_path):
+#     fid_metric = pyiqa.create_metric('fid')
+#     score = fid_metric(org_path, adv_path)
+#     print(score)
+#     return score
 
 if __name__ == '__main__':
     """Parse parameters."""
