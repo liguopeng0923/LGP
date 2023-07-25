@@ -1,4 +1,6 @@
-_base_ = 'mmdet/configs/faster_rcnn/faster_rcnn_r101_fpn_1x_coco.py'
+import os
+path = os.getcwd()
+_base_= os.path.join(path,'mmdet/configs/faster_rcnn/faster_rcnn_r101_fpn_1x_coco.py')
 
 model = dict(
     backbone=dict(

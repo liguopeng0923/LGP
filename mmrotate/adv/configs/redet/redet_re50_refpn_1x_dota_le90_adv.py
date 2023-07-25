@@ -1,6 +1,7 @@
-_base_ = [
-    '/mmrotate/configs/redet/redet_re50_refpn_1x_dota_le90.py',
-]
+import os
+path = os.getcwd()
+_base_= os.path.join(path,'/mmrotate/configs/redet/redet_re50_refpn_1x_dota_le90.py')
+
 # model = dict(
 #     test_cfg=dict(
 #             rpn=dict(

@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-_base_ = 'mmdet/configs/deformable_detr/deformable_detr_twostage_refine_r50_16x2_50e_coco.py'
+import os
+path = os.getcwd()
+_base_= os.path.join(path,'mmdet/configs/deformable_detr/deformable_detr_twostage_refine_r50_16x2_50e_coco.py')
 
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)

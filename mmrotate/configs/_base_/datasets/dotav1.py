@@ -1,6 +1,8 @@
 # dataset settings
+import os
+path = os.getcwd()
 dataset_type = 'DOTADataset'
-data_root = 'mmrotate/data/split_ss_dota/'
+data_root = os.path.join(path,'mmrotate/data/split_ss_dota/')
 
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)

@@ -29,13 +29,17 @@ Please refer to [Dota.md](https://github.com/open-mmlab/mmrotate/blob/1.x/tools/
 
 
 ### Train
+
+More runnings can be seen in [train.md](./docs/train.md)
 ```   
 CUDA_VISIBLE_DEVICES=2 python mmdet/adv/test/test_adv.py mmdet/adv/configs/faster_rcnn_adv/faster_rcnn_r50_fpn_1x_coco_adv.py mmdet/checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --eval bbox --work-dir ./work-dir --show-dir ./images
 ```
 
 ### Test
+You should first modify line 52 in [data root](./mmdet/configs/_base_/datasets/coco_detection.py) to the adversarial examples dir.
+
 ```
-CUDA_VISIBLE_DEVICES=2 python mmdet/tools/tes.py mmdet/configs/faster_rcnn_adv/faster_rcnn_r50_fpn_1x_coco_adv.py mmdet/checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --eval bbox --work-dir ./work-dir --show-dir ./images
+CUDA_VISIBLE_DEVICES=2 python mmdet/tools/test.py mmdet/configs/faster_rcnn_adv/faster_rcnn_r50_fpn_1x_coco_adv.py mmdet/checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --eval bbox --work-dir ./work-dir --show-dir ./images
 ```
 
 ## Acknowledgement
@@ -81,5 +85,11 @@ MMdetection, and MMRotate are open source projects that are contributed by resea
 
 If you use LGP in your projects or papers, please, cite it as follows.
 ```
-
+@misc{2307.12342,
+Author = {Guopeng Li and Yue Xu and Jian Ding and Gui-Song Xia},
+Title = {Towards Generic and Controllable Attacks Against Object Detection},
+url = {https://arxiv.org/abs/2307.12342}
+Year = {2023},
+Eprint = {arXiv:2307.12342},
+}
 ```

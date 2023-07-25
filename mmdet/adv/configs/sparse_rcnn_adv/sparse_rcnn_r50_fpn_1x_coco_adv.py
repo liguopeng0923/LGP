@@ -1,6 +1,7 @@
-_base_ = [
-    'mmdet/configs/sparse_rcnn/sparse_rcnn_r50_fpn_1x_coco.py'
-]
+import os
+path = os.getcwd()
+_base_= os.path.join(path,'mmdet/configs/sparse_rcnn/sparse_rcnn_r50_fpn_1x_coco.py')
+
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 # model = dict(

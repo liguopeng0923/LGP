@@ -61,14 +61,14 @@ def single_gpu_test_adv(model,
         #         adv_images = adv_images.reshape(org_images.shape).to(device)
         #     else:
         #         # attack images
-        # try:
-        adv_images,iou50,iou75 = attack(data)
-        iou50s += iou50
-        iou75s += iou75
-        # except:
-        #     logger = get_root_logger()
-        #     logger.warning(f"{img_metas[0]['ori_filename']} failed" )
-        #     adv_images = org_images
+        try:
+            adv_images,iou50,iou75 = attack(data)
+            iou50s += iou50
+            iou75s += iou75
+        except:
+            logger = get_root_logger()
+            logger.warning(f"{img_metas[0]['ori_filename']} failed" )
+            adv_images = org_images
         with torch.no_grad():  
             model.eval()
             data['img'].data[0] = adv_images

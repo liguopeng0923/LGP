@@ -1,4 +1,6 @@
-_base_ = "mmrotate/configs/s2anet/s2anet_r50_fpn_1x_dota_le135.py"
+import os
+path = os.getcwd()
+_base_= os.path.join(path,'mmrotate/configs/s2anet/s2anet_r50_fpn_1x_dota_le135.py')
 dataset_type = 'DOTADatasetAdv'
 
 angle_version = {{_base_.angle_version}}
