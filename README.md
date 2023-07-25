@@ -44,46 +44,12 @@ CUDA_VISIBLE_DEVICES=2 python mmdet/tools/test.py mmdet/configs/faster_rcnn_adv/
 
 ## Acknowledgement
 
-MMdetection, and MMRotate are open source projects that are contributed by researchers and engineers from various colleges and companies. We appreciate all the contributors who implement their methods or add new features, as well as users who give valuable feedbacks.
+[MMdetection](https://github.com/open-mmlab/mmdetection), and [MMRotate](https://github.com/open-mmlab/mmrotate) are open source projects that are contributed by researchers and engineers from various colleges and companies. We appreciate all the contributors who implement their methods or add new features, as well as users who give valuable feedbacks.
 
-```
-@article{mmdetection,
-  title   = {{MMDetection}: Open MMLab Detection Toolbox and Benchmark},
-  author  = {Chen, Kai and Wang, Jiaqi and Pang, Jiangmiao and Cao, Yuhang and
-             Xiong, Yu and Li, Xiaoxiao and Sun, Shuyang and Feng, Wansen and
-             Liu, Ziwei and Xu, Jiarui and Zhang, Zheng and Cheng, Dazhi and
-             Zhu, Chenchen and Cheng, Tianheng and Zhao, Qijie and Li, Buyu and
-             Lu, Xin and Zhu, Rui and Wu, Yue and Dai, Jifeng and Wang, Jingdong
-             and Shi, Jianping and Ouyang, Wanli and Loy, Chen Change and Lin, Dahua},
-  journal= {arXiv preprint arXiv:1906.07155},
-  year={2019}
-}
-
-
-@inproceedings{zhou2022mmrotate,
-  title   = {MMRotate: A Rotated Object Detection Benchmark using PyTorch},
-  author  = {Zhou, Yue and Yang, Xue and Zhang, Gefan and Wang, Jiabao and Liu, Yanyi and
-             Hou, Liping and Jiang, Xue and Liu, Xingzhao and Yan, Junchi and Lyu, Chengqi and
-             Zhang, Wenwei and Chen, Kai},
-  booktitle={Proceedings of the 30th ACM International Conference on Multimedia},
-  year={2022}
-}
-
-
-@misc{kastryulin2022piq,
-  title = {PyTorch Image Quality: Metrics for Image Quality Assessment},
-  url = {https://arxiv.org/abs/2208.14818},
-  author = {Kastryulin, Sergey and Zakirov, Jamil and Prokopenko, Denis and Dylov, Dmitry V.},
-  doi = {10.48550/ARXIV.2208.14818},
-  publisher = {arXiv},
-  year = {2022}
-}
-
-```
 
 ## Citation
 
-If you use LGP in your projects or papers, please, cite it as follows.
+If you find our work useful, please consider citing our paper:
 ```
 @misc{2307.12342,
 Author = {Guopeng Li and Yue Xu and Jian Ding and Gui-Song Xia},
