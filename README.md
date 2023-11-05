@@ -42,7 +42,7 @@ CUDA_VISIBLE_DEVICES=2 python mmdet/adv/test/test_adv.py mmdet/adv/configs/faste
 You should first modify line 52 in [data root](./mmdet/configs/_base_/datasets/coco_detection.py) to the adversarial examples dir.
 
 ```
-CUDA_VISIBLE_DEVICES=2 python mmdet/tools/test.py mmdet/configs/faster_rcnn_adv/faster_rcnn_r50_fpn_1x_coco_adv.py mmdet/checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --eval bbox --work-dir ./work-dir --show-dir ./images
+CUDA_VISIBLE_DEVICES=2 python mmdet/tools/test.py mmdet/configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py mmdet/checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth --eval bbox --work-dir ./work-dir --show-dir ./images
 ```
 
 ## Acknowledgement
